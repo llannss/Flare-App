@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare - Create an Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="logo-section">
+            <img src="assets/logo.png" alt="Flare Logo" class="main-logo-img">
+        </div>
+
+        <div class="login-card">
+            <h2>Create Account</h2>
+            <p class="subtitle">Please enter your information.</p>
+
+            <form class="login-form" id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Name" required autocomplete="name">
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required autocomplete="email">
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="btn-submit">Create account</button>
+            </form>
+
+            <p class="signup-redirect">Already have an account? <a href="login.html">Log In</a></p>
+
+            <div class="divider">
+                <span>Sign in with</span>
+            </div>
+
+            <div class="social-login">
+                <a href="http://localhost:8000/api/auth/google" class="social-icon-btn">
+                    <img src="assets/google-icon.png" alt="Google Sign In">
+                </a>
+            
+                <a href="#" class="social-icon-btn">
+                    <img src="assets/fb-icon.png" alt="Facebook Sign In">
+                </a>
+            
+                <a href="http://localhost:8000/api/auth/x" class="social-icon-btn">
+                    <img src="assets/x-icon.png" alt="X Sign In">
+                </a>
+            </div>
+            
+            <p class="terms-text">By signing up, you are agreeing to our Terms and Conditions.</p>
+        </div>
+
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

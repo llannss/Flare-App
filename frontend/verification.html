@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare - Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="logo-section">
+            <img src="assets/logo.png" alt="Flare Logo" class="main-logo-img">
+        </div>
+
+        <div class="login-card">
+            <h2>Verification</h2>
+            <p class="subtitle">We have sent a verification code to your registered email ID</p>
+
+            <form class="login-form" id="verifyOtpForm">
+                <div class="otp-container">
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                    
+                    <span class="otp-dash">-</span>
+                    
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                    <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Verify</button>
+            </form>
+
+            <p class="signup-redirect">
+                <a href="#" id="resendOtpLink" class="forgot-link">Resend OTP</a>
+            </p>
+
+            <p class="signup-redirect">
+                <a href="login.html" class="forgot-link">Back to Login</a>
+            </p>
+        </div>
+
+    </div>
+    <script src="js/verification.js"></script>
+</body>
+</html>

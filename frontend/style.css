@@ -1,0 +1,331 @@
+/* ==========================================================================
+   1. Core Reset & Global Layout Constants
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    background-image: url('assets/background.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #E8ECEF; 
+    color: #1C2B48; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 20px; 
+}
+
+/* ==========================================================================
+   2. Framework Grid & Logo Block
+   ========================================================================== */
+.login-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1150px; 
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    justify-self: start; 
+    padding-left: 15px;
+}
+
+.main-logo-img {
+    width: 320px; 
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   3. White Interface Card (Boxy Profile - Rigidly Sized to Prevent Expanding)
+   ========================================================================== */
+.login-card {
+    background-color: #F3F6F8; 
+    /* Tightened vertical padding to absorb extra fields easily */
+    padding: 30px 40px; 
+    border-radius: 12px; 
+    width: 100%;
+    max-width: 430px; 
+    /* Locked the height dimensions strictly to prevent vertical expansion */
+    height: 510px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    justify-self: end;
+    box-shadow: 0 15px 35px rgba(28, 43, 72, 0.12), 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.login-card h2 {
+    font-size: 1.9rem; 
+    font-weight: 700;
+    color: #1C2B48;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.login-card .subtitle {
+    font-size: 0.85rem;
+    color: #929497; 
+    margin-bottom: 20px; /* Compressed to save critical vertical space */
+    text-align: center;
+}
+
+/* ==========================================================================
+   4. Form Controls & Component Definitions
+   ========================================================================== */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Snug spacing ensures all 4 signup inputs fit perfectly inside the 510px height card */
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px 16px; /* Optimized layout thickness */
+    background-color: #D9D9D9; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 0.88rem;
+    color: #1C2B48;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.input-group input::placeholder {
+    color: #929497;
+    font-weight: 400;
+}
+
+.input-group input:focus {
+    border-color: #1C2B48;
+    background-color: #E2E2E2;
+}
+
+/* Remember Me Checkbox & Utilities Layout Arrangement */
+.form-utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #1C2B48;
+    font-weight: 500;
+}
+
+.remember-me input {
+    accent-color: #1C2B48;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+}
+
+.forgot-link {
+    color: #1C2B48;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Submission Button Configuration */
+.btn-submit {
+    background-color: #1C2B48;
+    color: #FFFFFF;
+    border: none;
+    padding: 11px 0; 
+    border-radius: 8px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 55%; 
+    margin: 4px auto 0 auto;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #273D66;
+}
+
+/* ==========================================================================
+   5. OTP Input Field Grid Architecture (Verification Page)
+   ========================================================================== */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.otp-container input {
+    width: 42px;
+    height: 42px; 
+    background-color: #D9D9D9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1C2B48;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.otp-container input:focus {
+    border-color: #1C2B48;
+    background-color: #E2E2E2;
+}
+
+.otp-dash {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #929497;
+    margin: 0 4px;
+}
+
+/* ==========================================================================
+   6. Alternate Options & Footer Links
+   ========================================================================== */
+.signup-redirect {
+    font-size: 0.82rem;
+    color: #1C2B48;
+    font-weight: 500;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.signup-redirect a {
+    color: #1C2B48;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline;
+}
+
+/* Line Splitter Divider Style */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 16px 0; 
+    color: #929497;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #929497;
+    opacity: 0.5;
+}
+
+.divider:not(:empty)::before {
+    margin-right: 12px;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 12px;
+}
+
+/* Social Icon Component Rows (Strict 1x1 Identical Layout Rules) */
+.social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.social-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;  
+    height: 32px; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.social-icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.terms-text {
+    font-size: 0.7rem;
+    color: #929497;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   7. Device Viewport Scale Adaptation Configurations
+   ========================================================================== */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto;
+    }
+    .login-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 40px 0;
+        justify-content: center;
+    }
+    .logo-section {
+        justify-self: center;
+        padding-left: 0;
+    }
+    .login-card {
+        justify-self: center;
+        height: auto;
+        max-height: none;
+    }
+}

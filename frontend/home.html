@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button class="icon-btn menu-trigger">
+                <img src="assets/hamburger.png" alt="Open Menu">
+            </button>
+            <img src="assets/logo-text.png" alt="FLARE" class="header-logo">
+        </div>
+        
+        <div class="header-right">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search for keywords, skills, job roles">
+            </div>
+            <button class="icon-btn profile-trigger">
+                <img src="assets/profile-icon.png" alt="User Profile">
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h3>Explore Categories</h3>
+                <a href="#" class="view-all">View all</a>
+            </div>
+            <div class="grid-layout four-columns">
+                <div class="category-card">
+                    <h4>Offensive Security</h4>
+                    <p>Penetration Testing, Exploit Dev, Web Attacks.</p>
+                    <span class="info-indicator">ⓘ</span>
+                </div>
+                <div class="category-card">
+                    <h4>Defensive Security</h4>
+                    <p>SOC Operations, Threat Hunting, Incident Response.</p>
+                    <span class="info-indicator">ⓘ</span>
+                </div>
+                <div class="category-card">
+                    <h4>Cloud & Infrastructure</h4>
+                    <p>AWS/Azure Security, DevSecOps, Container Hardening.</p>
+                    <span class="info-indicator">ⓘ</span>
+                </div>
+                <div class="category-card">
+                    <h4>Security Research & Labs</h4>
+                    <p>Malware Analysis, Reverse Engineering, CTFs.</p>
+                    <span class="info-indicator">ⓘ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h3>New Releases</h3>
+                <a href="#" class="view-all">View all</a>
+            </div>
+            <div class="grid-layout four-columns">
+                <div class="release-card" style="background-image: url('assets/New1.png');">
+                    <div class="release-overlay">
+                        <h5>ADVANCED WEB ATTACK</h5>
+                    </div>
+                </div>
+                <div class="release-card" style="background-image: url('assets/New2.png');">
+                    <div class="release-overlay">
+                        <h5>EXPLOIT DEVELOPMENT BOOTCAMP</h5>
+                    </div>
+                </div>
+                <div class="release-card" style="background-image: url('assets/New3.png');">
+                    <div class="release-overlay">
+                        <h5>INCIDENT RESPONSE SIMULATION</h5>
+                    </div>
+                </div>
+                <div class="release-card" style="background-image: url('assets/New4.png');">
+                    <div class="release-overlay">
+                        <h5>AI-DRIVEN MALWARE ANALYSIS</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h3>Skills</h3>
+                <a href="#" class="view-all">View all</a>
+            </div>
+            <div class="grid-layout four-columns">
+                <div class="skill-card">
+                    <div class="skill-illustration">
+                        <img src="assets/skill1.png" alt="Cloud Security Illustration">
+                    </div>
+                    <div class="skill-banner">
+                        <h5>Cloud Security</h5>
+                        <p>Defending cloud data, connectivity, infrastructure, and functionality....</p>
+                        <div class="skill-footer">
+                            <span class="level-indicator">Levels •••</span>
+                            <span class="info-indicator">ⓘ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-illustration">
+                        <img src="assets/skill2.png" alt="Exploit Development Illustration">
+                    </div>
+                    <div class="skill-banner">
+                        <h5>Exploit Development</h5>
+                        <p>Research into how programs work and how they might be mani....</p>
+                        <div class="skill-footer">
+                            <span class="level-indicator">Levels •••</span>
+                            <span class="info-indicator">ⓘ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-illustration">
+                        <img src="assets/skill3.png" alt="Penetration Testing Illustration">
+                    </div>
+                    <div class="skill-banner">
+                        <h5>Penetration Testing</h5>
+                        <p>The act of performing ongoing cycles of research and attack....</p>
+                        <div class="skill-footer">
+                            <span class="level-indicator">Levels •••</span>
+                            <span class="info-indicator">ⓘ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-illustration">
+                        <img src="assets/skill4.png" alt="Wireless Security Illustration">
+                    </div>
+                    <div class="skill-banner">
+                        <h5>Wireless Security</h5>
+                        <p>Monitoring Wi-Fi, penetration testing, protocol analysis,....</p>
+                        <div class="skill-footer">
+                            <span class="level-indicator">Levels •••</span>
+                            <span class="info-indicator">ⓘ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
